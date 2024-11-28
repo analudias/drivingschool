@@ -14,15 +14,18 @@ import lombok.Setter;
 @Setter
 @EqualsAndHashCode
 @Table(name = "tb_lessons")
-public class Lessons {
+public class Lesson {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
     private String lesson;
-    private Double hoursByLesson;
 
-    public Lessons(){
+    public Lesson(){
     }
 
+    public Lesson(Long id, String lesson) {
+        this.id = id;
+        this.lesson = lesson;
+    }
 }
